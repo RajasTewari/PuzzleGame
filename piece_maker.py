@@ -1,7 +1,7 @@
 from PIL import Image
 
 # open image
-def grid_maker(image_file):
+def nine_piecer(image_file):
     img = Image.open(image_file)
     width, height = img.size
 
