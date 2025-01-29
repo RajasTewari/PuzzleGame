@@ -22,3 +22,5 @@ def nine_piecer(image_file):
             pieces += [resized_img.crop((left, top, right, bot))]
 
     return pieces
+
+# not sure if this whole thing is even necessary
