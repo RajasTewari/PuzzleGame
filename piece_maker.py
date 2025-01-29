@@ -4,8 +4,10 @@ from PIL import Image
 def nine_piecer(image_file):
     img = Image.open(image_file)
     width, height = img.size
+    resized_img = img.resize((600, 600))
 
-# creating the array with 9 pieces (3x3 grid)
+
+    # creating the array with 9 pieces (3x3 grid)
     pieces = []
     for i in range(3):
         for j in range(3):
@@ -17,6 +19,6 @@ def nine_piecer(image_file):
             right = (i + 1)  * (width / 3)
             bot = (j + 1) * (height / 3)
             # adding each cropped element to the list
-            pieces += [img.crop((left, top, right, bot))]
+            pieces += [resized_img.crop((left, top, right, bot))]
 
     return pieces
